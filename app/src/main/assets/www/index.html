@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hybird</title>
+    <script>
+        function OnJsToNative() {
+            var values=document.getElementById("input_value").value;
+//            alert("这是付智焱的网页")
+            alert(values);
+            //login://usermanager/userlogin?userName=value
+            window.location.href="login://usermanager/userlogin?userName="+values;
+        }
+        function onNativeToJs(fromNavtiveValues){
+
+            alert(fromNavtiveValues)
+        }
+        function OnJsToNative2(){
+            myApp.showToast("这是来自付智焱网页显示的内容");
+        }
+    </script>
+</head>
+<body>
+<input id="input_value">
+<button onclick="OnJsToNative()">猛戳我</button>
+<button onclick="OnJsToNative2()">快怼我</button>
+<img src="http://img4.imgtn.bdimg.com/it/u=2389140428,1315216178&fm=26&gp=0.jpg">
+<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png">
+</body>
+</html>
